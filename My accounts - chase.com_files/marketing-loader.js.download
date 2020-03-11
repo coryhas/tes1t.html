@@ -1,0 +1,65 @@
+define('slotplacement/slotplacementconfig', {
+    "mktuiFrameworkCdnVersion": "2020.02.09-13",
+    "timeoutDSOApi": "3000",
+    "timeOutDsoHashApi": "3000",
+    "timeOutCardlyticsApi": "3000",
+    "timeout": "2000",
+    "timeoutFailover": "2000",
+    "timeoutOfferApi": "2000",
+    "dsoOfferServiceUrl": "/svc/wr/oao/public/dsooffer/v1.0/offerdecision",
+    "dpsHashApiUrl": "/svc/wr/oao/public/sixers/v1.0/hash",
+    "showExpiredState": "4",
+    "cardlyticsOfferCountLevel": "Primary",
+    "cardlyticsChannel": "5",
+    "cardlyticsDisplayTypeOffer": "Offer",
+    "isLogCardlyticsError": "true",
+    "cardlyticsRedemeptionLookbackAvailable": "0",
+    "cardlyticsExpiredLookbackExpired": "90",
+    "cardlyticsExpiredLookbackRedeemed": "0",
+    "cardlyticsRedemeptionLookbackRedeemed": "90",
+    "cardlyticsExpiredLookbackAvailable": "0",
+    "cardlyticsRedemeptionLookbackExpired": "0",
+    "cardlyticsRedemeptionLookbackGetCount": "0",
+    "cardlyticsTranasctionId": "0",
+    "cardlyticsExpiredLookbackGetCount": "0",
+    "cardlyticsDisplayTypeOther": "Other",
+    "cardlyticsOfferTileTemplateUrlEN": "/services/creatives/merchantoffers/tile.json/content/Marketing/MerchantOffersTile/merchantoffertile.json",
+    "cardlyticsOfferDetailTemplateUrlEN": "/services/creatives/merchantoffers/details.en.json/content/Marketing/MerchantOfferDetails/merchantofferdetails.json",
+    "cardlyticsOfferDetailTemplateUrlEs": "/services/creatives/merchantoffers/details.es.json/content/Marketing/MerchantOfferDetails/merchantofferdetails.json",
+    "viewableImpressionTag": "corp_wl_viewimpression",
+    "variationActivityTag": "corp_wl_dynamicad",
+    "isAuthorMode": "false",
+    "excludedQueryPassforwardParams": "iCELL",
+    "isClassic": "false",
+    "adTrackingDisabled": "false",
+    "XPOOrgID": "15629",
+    "isPixelTagEnabled": "true",
+    "isAnalyticsEnabled": "true",
+    "trackingPixelImagePathAnalytics": "",
+    "duplicateImpressionTracking": "true",
+    "isIconEnabled": "true",
+    "iconOfferServiceUrl": "/svc/wr/oao/secure/v1/icon/offer/list",
+    "MIDASDecisionUrl": "https://midas.chase.com/prweb/PRRestService/MIDASSVCS/v1/MakeDecision",
+    "contentServer": "https://sites.chase.com",
+    "failOverAdServiceUrl": "https://sites.chase.com/services/dynamic/getFailOverData.json",
+    "loadingImagePath": "https://www.chase.com/etc/designs/chasecom/images/loading.gif",
+    "trackingPixelImagePath": "https://www.chase.com/online/Home/images/wa01.gif?log=1",
+    "cardlyticsServiceUrl": "/events/cardlytics/7092PROOPS",
+    "cardlyticsImageHost": "/events/cardlytics/7092PROOPS/public/BankImages.ashx",
+    "marketingCxoAdsUi": "https://static.chasecdn.com/web/marketing-ui/cxo-ads/2020.02.09-13/web-ui",
+    "mktuiFrameworkUrl": "https://static.chasecdn.com/web/marketing-ui/cxo-ads/2020.02.09-13/web-framework/slotplacement.min",
+    "iconPageIds": {}
+}); 
+require.config({
+    paths: {
+        "mktui-framework": "https://static.chasecdn.com/web/marketing-ui/cxo-ads/2020.02.09-13/web-framework/slotplacement.min",
+    },
+    bundles: {
+        'mktui-framework': ['slotplacement/service', 'slotplacement/placement', 'slotplacement/topic', 'slotplacement/contentprovider', 'slotplacement/cardlyticsinit']
+    }
+});
+
+require(['mktui-framework']);
+
+
+        

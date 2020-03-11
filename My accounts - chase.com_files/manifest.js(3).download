@@ -1,0 +1,73 @@
+/**
+ * @module 'area/manifest'
+ **/
+define({
+  version: 2,
+  area: {
+    module: 'area-activation/area',
+    viewPath: {
+      prefix: 'area-activation/views/'
+    },
+    dependencies: {
+      './css/area.css': 'css'
+    },
+    controllers: {
+      index: {
+        construct: {},
+        components: {
+          activation: {},
+          exitApplication: {
+            block: 'cmpt-exitApplication'
+          },
+          logo: {
+            block: 'cmpt-logo'
+          },
+          navigationButtons: {
+            block: 'cmpt-navigationButtons'
+          },
+          progressBar: {
+            block: 'cmpt-progressBar'
+          },
+          inlineModal: {
+            block: 'cmpt-inlineModal'
+          },
+          spinner: {
+            block: 'cmpt-inlineModal'
+          },
+          confirmationMessage: {
+            block: 'cmpt-messages'
+          }
+        }
+      },
+      cacheUtil: {
+        block: 'cntlr-cacheParser'
+      },
+      statusUpdate: {
+        block: 'cntlr-statusUpdate'
+      },
+      messageList: {
+        block: 'cntlr-messageList'
+      },
+      setup: {
+        block: 'cntlr-setup'
+      },
+      alerts: {
+        block: 'cntlr-alerts'
+      },
+      fundingOptions: {
+        block: 'cntlr-fundingOptions'
+      }
+    },
+    services: {
+      references: {
+        module: 'cntlr-cacheParser/services/references'
+      },
+      content: {
+        module: 'appkit-utilities/content/contentSvc'
+      },
+      cxoContent: {
+        module: 'dashboard/service/content'
+      }
+    }
+  }
+});
